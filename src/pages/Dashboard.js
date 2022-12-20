@@ -4,7 +4,7 @@ export default function Dashboard(props) {
   
         return(
             <div className="dashboard">
-            <h1> its working</h1>
+        
             {data.map((info) => {
                 const { name, symbol} = info;
                 return(

@@ -1,16 +1,23 @@
+HTML{
+  background-color: rgb(214, 184, 189);
+
+}
+
 .App {
   text-align: center;
 }
 
 .Nav{
-  background-color: rgb(232, 133, 12);
+  background-color: rgb(178, 119, 108);
   padding-top: 3%;
   padding-bottom: 5%;
-  font-weight: bold;
-  font-size: x-large;
-  text-decoration: none;
+
 }
 
-.dashboard{
-  background-color: antiquewhite;
-}
+nav a{
+    color: white;
+    font-weight: bold;
+    font-size: x-large;
+    text-decoration: none;
+  }
+

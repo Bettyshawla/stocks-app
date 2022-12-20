@@ -5,11 +5,11 @@ import data from "../data";
 export default function Stock(props) {
 
     const [info, setInfo] = useState(null)
-    const { name } = useParams();
+    const { symbol } = useParams();
 
      const getInfo = async () => {
             try {
-                const stock = data.find(eachInfo => eachInfo.name === name);
+                const stock = data.find(eachStock => eachStock.symbol === symbol);
                 setInfo(stock);
             } catch (error) {
                 console.error(error);
@@ -22,8 +22,8 @@ export default function Stock(props) {
 const loaded =() => {
      return (
     <div>
-      <span>{info.name}</span>
-      <span>{info.lastPrice}</span>
+      <h2>Stock name: {info.name} / {info.symbol}</h2>
+      <h3>Current Price: {info.lastPrice}</h3>
     </div>
   );
 }
