@@ -7,17 +7,15 @@ export default function Stock(props) {
     const [info, setInfo] = useState(null)
     const { name } = useParams();
 
-
-    useEffect(() => {
-        const getInfo = async () => {
+     const getInfo = async () => {
             try {
-                const stock = data.find(info => info.name === name);
+                const stock = data.find(eachInfo => eachInfo.name === name);
                 setInfo(stock);
             } catch (error) {
                 console.error(error);
             }
         }
-
+    useEffect(() => {
         getInfo();
     }, []);
 
@@ -31,9 +29,13 @@ const loaded =() => {
 }
 
 const loading = () => {
-    return  <h2>loading ...</h2>
+    return (
+        <h1>Loading...</h1>
+    )
 }
- 
 
+return(
+    info ? loaded() : loading()
+)
 
 }
